@@ -1,0 +1,128 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:100";
+
+*{
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "Roboto-bold", Arial, sans-serif;
+}
+
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(315deg, #ffffff 0%, #f7fbff 74%);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+.top {
+    display: grid;
+    place-items: center;
+    position: fixed;
+}
+
+.pp {
+    width: 350px;
+    clip-path: circle();
+}
+
+h1 {
+    font-size: 7.5rem;
+    text-shadow: 0.5rem 0.5rem 20px rgba(0, 0, 0, 0.075);
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to left, rgba(255, 0, 106, 0.774), #ff00b3, #d400ff, #610cff);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    animation: change 10s linear infinite;
+    -webkit-background-size: 500%;
+    background-size: 500%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+
+.wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover{
+    width: 200px;
+  }
+
+  .wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+
+  .wrapper .button:nth-child(2):hover .icon{
+    background: #0055ff;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background: #1DA1F2;
+  }
+  .wrapper .button:nth-child(4):hover .icon{
+    background: linear-gradient(rgb(226, 21, 100), rgb(255, 0, 128));
+  }
+  .wrapper .button:nth-child(5):hover .icon{
+    background: #333;
+  }
+  .wrapper .button:nth-child(6):hover .icon{
+    background: #ffee00;
+  }
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: #0055ff;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: #1DA1F2;
+  }
+  .wrapper .button:nth-child(4) span{
+    color: #E1306C;
+  }
+  .wrapper .button:nth-child(5) span{
+    color: #333;
+  }
+  .wrapper .button:nth-child(6) span{
+    color: #ffee00;
+  }
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    } 50% {
+        background-position: 100% 50%;
+    } 100% {
+        background-position: 0 50%;
+    }
+}
