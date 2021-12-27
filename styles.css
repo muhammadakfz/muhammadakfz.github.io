@@ -43,6 +43,14 @@ h1 {
     margin-bottom: 5%;
 }
 
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
 .wrapper .button{
     display: inline-block;
     height: 60px;
