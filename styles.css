@@ -33,7 +33,7 @@ h1 {
     text-shadow: 0.5rem 0.5rem 20px rgba(0, 0, 0, 0.075);
     text-transform: lowercase;
     letter-spacing: 2px;
-    background: linear-gradient(to left, rgba(255, 0, 106, 0.774), #ff00b3, #d400ff, #610cff);
+    background: linear-gradient(to left, #610cff, #ff00b3, #d400ff, #610cff);
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     animation: change 10s linear infinite;
