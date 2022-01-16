@@ -1,0 +1,47 @@
+#photo {
+  width: 250px;
+  clip-path: circle();
+  margin-bottom: initial;
+  margin-bottom: -5%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-shadow: 0.5rem 0.5rem 20px rgba(0, 0, 0, 0.075);
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to left, #610cff, #ff00b3, #d400ff, #610cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: change 10s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+html, body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(315deg, #f2e0fd 0%, #f7fbff 74%);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+
