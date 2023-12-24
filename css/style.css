@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.parallax {
+    background-color: whitesmoke;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(16, 16, 16);
+}
+
+.personal {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 50px;
+}
+
+.photo {
+    width: 250px;
+    clip-path: circle();
+}
+
+.name{
+    padding-top: 25px;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(16, 16, 16);
+}
+
+.bio {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
