@@ -95,6 +95,10 @@
 }
 
 @media screen and (max-width: 768px){
+    #btn {
+        width: 35px;   
+    }
+
     .personal {
         text-align: center;
     }
