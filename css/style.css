@@ -71,11 +71,13 @@ section {
 }
 
 .sec-intro {
+    opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%);
 }
 
 .sec-intro.active {
+    opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
@@ -86,12 +88,12 @@ section {
 }
 
 .sec-content .photo{
-    filter: blur(100px);
+    opacity: 0;
     transform: scale(.1)
 }
 
 .sec-content.active .photo{
-    filter: blur(0);
+    opacity: 1;
     transform: scale(1)
 }
 
@@ -101,11 +103,13 @@ section {
 }
 
 .sec-content .social{
+    opacity: 0;
     filter: blur(10px);
     transform: scale(.3)
 }
 
 .sec-content.active .social{
+    opacity: 1;
     filter: blur(0);
     transform: scale(1)
 }
