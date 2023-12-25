@@ -7,13 +7,11 @@
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    background-color: whitesmoke;
+    transition: 1s;
 }
 
-.parallax {
-    background-color: whitesmoke;
-    background-size: cover;
-    background-attachment: fixed;
-    scroll-snap-type: y mandatory;
+section {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
@@ -38,6 +36,7 @@
     flex-direction: column;
     text-align: left;
     margin: 300px;
+    margin-bottom: 0px;
 }
 
 .photo {
@@ -60,12 +59,58 @@
 }
 
 #btn {
-    width: 75px;
+    width: 65px;
     background: whitesmoke;
     border: 0px solid;
     margin: 10px;
     margin-left: 0px;
 }
+
+section {
+    transition: 1s;
+}
+
+.sec-intro {
+    filter: blur(10px);
+    transform: translateX(-100%);
+}
+
+.sec-intro.active {
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.sec-content .animate{
+    filter: blur(10px);
+    transform: translateX(-100%);
+}
+
+.sec-content .photo{
+    filter: blur(100px);
+    transform: scale(.1)
+}
+
+.sec-content.active .photo{
+    filter: blur(0);
+    transform: scale(1)
+}
+
+.sec-content.active .animate{
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.sec-content .social{
+    filter: blur(10px);
+    transform: scale(.3)
+}
+
+.sec-content.active .social{
+    filter: blur(0);
+    transform: scale(1)
+}
+
+
 
 @media screen and (max-width:1280px){
     .title {
