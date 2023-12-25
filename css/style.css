@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
 *, html, body {
     margin: 0;
     padding: 0;
@@ -83,6 +84,7 @@ section {
 }
 
 .sec-content .animate{
+    opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%);
 }
@@ -98,6 +100,7 @@ section {
 }
 
 .sec-content.active .animate{
+    opacity: 1  ;
     filter: blur(0);
     transform: translateX(0);
 }
@@ -105,13 +108,13 @@ section {
 .sec-content .social{
     opacity: 0;
     filter: blur(10px);
-    transform: scale(.3)
+    /* transform: scale(.3) */
 }
 
 .sec-content.active .social{
     opacity: 1;
     filter: blur(0);
-    transform: scale(1)
+    /* transform: scale(1) */
 }
 
 
