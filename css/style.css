@@ -78,10 +78,6 @@ section {
   color: whitesmoke
 }
 
-section {
-    transition: 1s;
-}
-
 .sec-intro .title{
     opacity: 0;
     filter: blur(10px);
@@ -143,7 +139,6 @@ section {
 }
 
 .sec-footer .comming{
-  filter: blur(10px);
     color: rgb(16, 16, 16);
 }
 
@@ -152,7 +147,6 @@ section {
 }
 
 .sec-footer.active .comming{
-  filter: blur(0px);
     color: whitesmoke
 }
 
