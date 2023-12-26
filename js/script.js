@@ -1,5 +1,3 @@
-
-
 let sections = document.querySelectorAll('section');
 
 window.onscroll = () => {
