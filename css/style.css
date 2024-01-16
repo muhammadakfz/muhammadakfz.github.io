@@ -36,8 +36,8 @@ section {
 
 .personal {
     flex-direction: column;
-    text-align: left;
-    margin: 300px;
+    text-align: center;
+    margin: 400px;
     margin-bottom: 0px;
 }
 
@@ -61,10 +61,10 @@ section {
 }
 
 #btn {
-    width: 65px;
+    width: 55px;
     background: whitesmoke;
     border: 0px solid;
-    margin: 10px;
+    margin: 15px;
     margin-left: 0px;
 }
 
