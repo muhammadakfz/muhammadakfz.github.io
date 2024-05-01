@@ -11,6 +11,12 @@ window.onscroll = () => {
         } else {
             section.classList.remove('active');
         }
+
+        if(window.scrollY + window.innerHeight >= document.body.scrollHeight){
+            document.querySelector('.sec-footer').style.opacity = 1;
+        } else {
+            document.querySelector('.sec-footer').style.opacity = 0;
+        }
     })
 }
 

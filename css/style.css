@@ -10,14 +10,13 @@
     box-sizing: 0;
     transition: 1s;
     scroll-behavior: smooth;
+    background-color: whitesmoke;
 }
 
 section {
     background-color: whitesmoke;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 100%;
-    height: 100vh;
 }
 
 .cta {
@@ -35,6 +34,7 @@ section {
 }
 
 .personal {
+    width: 50%;
     flex-direction: column;
     text-align: center;
     margin: 400px;
@@ -42,40 +42,58 @@ section {
 }
 
 .photo {
-    width: 250px;
+    width: 150px;
     clip-path: circle();
 }
 
 .name{
     padding-top: 25px;
-    font-size: 38px;
-    letter-spacing: 10px;
+    font-size: 28px;
+    letter-spacing: 5px;
     font-family: 'Poppins', sans-serif;
     color: rgb(16, 16, 16);
 }
 
+a {
+  color: rgb(122, 122, 122);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(16, 16, 16); 
+  text-decoration:none; 
+  cursor:pointer;  
+}
+
 .bio {
-    font-family: 'Poppins', sans-serif;
+    padding-top: 15px;
+    font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     letter-spacing: 1px;
+    color: rgb(16, 16, 16);
 }
 
 #btn {
-    width: 55px;
+    padding-top: 15px;
+    width: 45px;
     background: whitesmoke;
     border: 0px solid;
     margin: 15px;
     margin-left: 0px;
 }
 
+.blank {
+    color: whitesmoke;
+}
+
 .sec-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 38px;
+  font-size: 14px;
   letter-spacing: 5px;
   font-family: 'Roboto Mono', monospace;
-  color: whitesmoke
+  color: rgb(0, 0, 0)
 }
 
 .sec-intro .title{
@@ -132,22 +150,6 @@ section {
     opacity: 1;
     filter: blur(0);
     /* transform: scale(1) */
-}
-
-.sec-footer {
-    background-color: whitesmoke;
-}
-
-.sec-footer .comming{
-    color: rgb(16, 16, 16);
-}
-
-.sec-footer.active {
-    background-color: rgb(16, 16, 16);;
-}
-
-.sec-footer.active .comming{
-    color: whitesmoke
 }
 
 
@@ -232,7 +234,7 @@ section {
     }
 
     #btn {
-        width: 50px;
+        width: 40px;
     }
 
     .personal {
@@ -258,10 +260,16 @@ section {
 
 @media screen and (max-width: 768px){
     #btn {
-        width: 35px;   
+        padding-top: 10px;
+        width: 30px;   
     }
 
     .personal {
         text-align: center;
+    }
+
+    .sec-footer {
+      font-size: 10px;
+      text-align: center;
     }
 }
