@@ -41,7 +41,7 @@ export default function Home() {
             </span>
           </div>
           <h1 className={styles.description}>
-            Competitive Programming Enthusiast | Non-stop learner!
+            <text className='font-bold'>Competitive Programming Enthusiast</text> | Non-stop learner!
           </h1>
         </div>
       </div>
