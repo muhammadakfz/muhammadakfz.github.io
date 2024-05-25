@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const menuItem = (url: string, text: string, className?:string) => (
+  const menuItem = (url: string, text: string, className?: string) => (
     <div className={className}>
       <Link href={url}>{text}</Link>
     </div>
@@ -25,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="container mx-auto py-[10px]">
-        <div className="inline-flex w-full justify-between sticky top-0 py-[20px] bg-white backdrop-blur-md bg-opacity-50 z-50 ">
+        <div className="box-border w-full p-4 border-4 sticky top-5 py-[20px] backdrop-blur-sm bg-white/30 z-50 border-transparent rounded-full"> 
+          <div className="inline-flex w-full justify-between">
             {menuItem('#muhammadakfz', 'muhammadakfz', "font-bold")}
-          <div className='inline-flex space-x-10 justify-end'>
-            {menuItem('#about', 'About', "font-normal hover:font-bold")}
-            {menuItem('/', 'Contact', "font-normal hover:font-bold")}
+            <div className='inline-flex space-x-10 justify-end pe-10px'>
+              {menuItem('#about', 'About', "font-normal hover:font-bold")}
+              {menuItem('/', 'Contact', "font-normal hover:font-bold")}
+            </div>
           </div>
         </div>
         {children}

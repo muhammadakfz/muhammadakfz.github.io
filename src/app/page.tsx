@@ -20,7 +20,7 @@ export default function Home() {
       const typed = new Typed(welcomeRef.current, {
         strings: ["もしもし!", "Hello World!👋", "I am Fahrur"],
         typeSpeed: 150,
-        backSpeed: 150,
+        backSpeed: 200,
         loop: true
       })
 
@@ -41,7 +41,7 @@ export default function Home() {
             </span>
           </div>
           <h1 className={styles.description}>
-            <text className='font-bold'>Competitive Programming Enthusiast</text> | Non-stop learner!
+            <text className='font-bold'>Competitive Programming Enthusiast</text>, <text className='font-bold'>Non-stop learner!</text> and <text className='font-bold'>More</text>
           </h1>
         </div>
       </div>
