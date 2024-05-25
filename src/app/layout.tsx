@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="container mx-auto py-[10px]">
-        <div className="box-border w-full p-4 border-4 sticky top-5 py-[20px] backdrop-blur-sm bg-white/30 z-50 border-transparent rounded-full"> 
+        <div className="box-border w-full p-4 border-4 sticky top-5 py-[20px] backdrop-blur-sm bg-white/30 z-50 drop-shadow-xl hover:drop-shadow-2xl border-transparent rounded-full"> 
           <div className="inline-flex w-full justify-between">
             {menuItem('#muhammadakfz', 'muhammadakfz', "font-bold")}
             <div className='inline-flex space-x-10 justify-end pe-10px'>
