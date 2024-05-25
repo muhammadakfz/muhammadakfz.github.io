@@ -6,7 +6,7 @@ import styles from "./styles/Home.module.css";
 
 export default function Home() {
   const welcomeRef = useRef(null);
-
+  // main
   useEffect(() => {
     if (welcomeRef.current) {
       const typed = new Typed(welcomeRef.current, {
