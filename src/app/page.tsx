@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     if (welcomeRef.current) {
       const typed = new Typed(welcomeRef.current, {
-        strings: ["もしもし!", "Hello World!👋", "I am Fahrur"],
+        strings: ["Under Construction"],
         typeSpeed: 150,
         backSpeed: 200,
         loop: true
