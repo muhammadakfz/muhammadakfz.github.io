@@ -23,17 +23,20 @@ export default function RootLayout({
   );
 
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="container mx-auto py-[10px]">
-        <div className="box-border w-full p-4 border-4 sticky top-5 py-[20px] backdrop-blur-sm bg-white/30 z-50 drop-shadow-xl hover:drop-shadow-2xl border-transparent rounded-full"> 
-          <div className="inline-flex w-full justify-between">
-            {menuItem('#muhammadakfz', 'muhammadakfz', "font-bold")}
-            <div className='inline-flex space-x-10 justify-end pe-10px'>
-              {menuItem('#about', 'About', "font-normal hover:font-bold")}
-              {menuItem('/', 'Contact', "font-normal hover:font-bold")}
-            </div>
+    <html lang="en">
+      <body>
+        <aside className="-ml-[8px] mb-16 tracking-tight">
+          <div className="lg:sticky lg:top-20">
+            <nav className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative" id="nav">
+              <div className="flex flex-row space-x-0 pr-10">
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="/">home</a>
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#work">about</a>
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#blog">contact</a>
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#guestbook">guestbook</a>
+              </div>
+            </nav>
           </div>
-        </div>
+        </aside>
         {children}
       </body>
     </html>
