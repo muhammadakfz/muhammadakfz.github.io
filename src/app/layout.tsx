@@ -31,8 +31,8 @@ export default function RootLayout({
               <div className="flex flex-row space-x-0 pr-10">
                 <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="/">home</a>
                 <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#work">about</a>
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#blog">contact</a>
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#guestbook">guestbook</a>
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="https://github.com/muhammadakfz">github</a>
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#contact">contact me</a>
               </div>
             </nav>
           </div>
