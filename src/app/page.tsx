@@ -20,7 +20,7 @@ export default function Home() {
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 ">
           <h1 className={`text-2xl mb-10 antialiased font-medium tracking-tight ${GeistSans.className}`}>Hi! l am Fahrur <span className="wave">👋</span></h1>
           <p className={`text-lg mt-4 prose prose-neutral dark:prose-invert ${GeistSans.className}`}>
-            I am a programmer who started my career since 2019. As a graduate of Dicoding Academy, I have a deep interest in competitive programming, web development, machine learning, and hacking.
+            I'm a programmer with a strong passion for competitive programming, web development, machine learning, and cybersecurity. Since starting my career in 2019, I have been committed to continuous learning and growth.
           </p>
         </main>
       </body>
