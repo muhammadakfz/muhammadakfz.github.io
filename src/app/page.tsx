@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className={`text-2xl mb-10 antialiased font-medium tracking-tight ${GeistSans.className}`}>Hi! l am Fahrur <span className="wave">👋</span></h1>
           <p className={`text-lg mt-4 prose prose-neutral dark:prose-invert ${GeistSans.className}`}> I'm a programmer with a strong passion for competitive programming, web development, machine learning, and cybersecurity. Since starting my career in 2019, I have been committed to continuous learning and growth.</p>
           <p className={`text-lg mt-4 prose prose-neutral dark:prose-invert ${GeistSans.className}`}>
-            Currently, I am freelancing as a web developer, data analyst, and few other things. I am a student at <a href="https://www.itb.ac.id/" target="_blank" className="text-blue-500">Institut Teknologi Bandung</a>, majoring in Informatics Engineering.
+            Currently, I am freelancing as a web developer, data analyst, and few other things. I am a student at <a href="https://www.itb.ac.id/" target="_blank" className="text-blue-500 underline">Institut Teknologi Bandung</a>, majoring in Informatics Engineering.
           </p>
           {/* <div className="mt-5">
             <a href="/muhammadakfz_CV.pdf" download className="bg-blue-700 text-white text-small font-semibold px-4 py-2 rounded-md">Download CV</a>
