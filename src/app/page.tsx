@@ -19,13 +19,13 @@ const SocialMediaLinks = () => {
   return (
     <div className="social-media-links mt-10 flex flex-grid">
       <SocialMediaButton
-        url="https://twitter.com/yourusername"
+        url="https://www.instagram.com/muhammadakfz"
         icon="/instagram.png"
         altText="Instagram"
         className={"w-8 h-8 mr-5"}
       />
       <SocialMediaButton
-        url="https://linkedin.com/in/yourusername"
+        url="https://x.com/mxddoofzx"
         icon="/x.png"
         altText="X"
         className={"w-7 h-7 mr-5"}
