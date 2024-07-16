@@ -44,7 +44,7 @@ const SocialMediaLinks = () => {
 export default function Home() {
   return (
     <>
-      <title>muhammadakfz✌️</title>
+      <title>Home | muhammadakfz✌️</title>
       <body className={`max-w-2xl mb-40 md:flex-row mx-4 mt-8 lg:mx-auto ${GeistSans.className}`}>
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 ">
           <h1 className={`text-2xl mb-10 antialiased font-medium tracking-tight ${GeistSans.className}`}>Hi! l am Fahrur <span className="wave">👋</span></h1>
@@ -56,7 +56,7 @@ export default function Home() {
           <SocialMediaLinks/>
           
           <div className="mt-10">
-            <a href="#work" className="bg-black text-white text-small font-semibold px-4 py-3 rounded-md btn">learn more</a>
+            <a href="/about" className="bg-black text-white text-small font-semibold px-4 py-3 rounded-md btn">learn more</a>
           </div>
         </main>
       </body>
