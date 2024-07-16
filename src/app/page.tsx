@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import "./styles/globals.css"
 import { GeistSans } from 'geist/font/sans';
 
-const SocialMediaButton = ({ url, icon, altText, className }) => {
+const SocialMediaButton = ({ url, icon, altText, className }: { url: string, icon: string, altText: string, className: string }) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className="social-media-button">
       <img src={icon} alt={altText} className={`icon ${className}`} />
