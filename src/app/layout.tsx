@@ -31,7 +31,7 @@ export default function RootLayout({
                 <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 " href="/">home</a>
                 <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="/about">about</a>
                 <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="https://github.com/muhammadakfz">github</a>
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="#contact">contact me</a>
+                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="/contact">contact me</a>
               </div>
             </nav>
           </div>
