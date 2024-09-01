@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import "./styles/globals.css";
+import { Analytics } from "@vercel/analytics/react"
 import Link from "next/link";
 
 
