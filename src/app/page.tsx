@@ -53,6 +53,15 @@ export default function Home() {
     <>
       <title>Home | muhammadakfz✌️</title>
       <body className={`max-w-2xl mb-40 md:flex-row mx-4 mt-8 lg:mx-auto `}>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQC40TBS0H"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TQC40TBS0H');
+          `,
+        }} />
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 ">
           <h1 className={`text-2xl mb-10 antialiased font-medium tracking-tight CourierPrime font-semibold`}>Hi! l am Fahrur <span className="wave">👋</span></h1>
           <p className={`text-lg mt-4 prose prose-neutral dark:prose-invert CourierPrime `}>
@@ -62,7 +71,7 @@ export default function Home() {
             <a href="/muhammadakfz_CV.pdf" download className="bg-blue-700 text-white text-small font-semibold px-4 py-2 rounded-md">Download CV</a>
           </div> */}
 
-          <SocialMediaLinks />
+          {/* <SocialMediaLinks /> */}
 
           <div className="mt-10">
             <a href="/about" className="bg-black text-white text-small font-semibold px-4 py-3 CourierPrime rounded-md btn">learn more</a>
@@ -160,7 +169,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-20 mb-5">
+          <div className="mt-10 mb-5">
             <p className="prose prose-neutral dark:prose-invert text-center CourierPrime">
               ©2024  <a className='text-blue-700 hover:text-blue-900' href='https://www.instagram.com/muhammadakfz/?hl=id'>muhammadakfz</a>. All rights reserved.
             </p>
