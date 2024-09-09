@@ -81,7 +81,7 @@ export default function Home() {
           </div>
 
           <section className="mt-20">
-            <h2 className="text-2xl font-semibold mb-4 text-right CourierPrime">My Skills__</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-right CourierPrime">🧠 My Skills__</h2>
             <p className="text-lg prose prose-neutral dark:prose-invert text-right CourierPrime">
               I have experience with a variety of technologies, including React, Next.js, TypeScript, and Tailwind CSS. I am also familiar with Python, Java, and C++.
             </p>
@@ -117,7 +117,7 @@ export default function Home() {
           </div>
 
           <section className="mt-20">
-            <h2 className="text-2xl font-semibold mb-4 CourierPrime">Projects__</h2>
+            <h2 className="text-2xl font-semibold mb-4 CourierPrime">🎯 Projects__</h2>
             <p className="text-lg prose prose-neutral dark:prose-invert CourierPrime">
               Here are some of my recent projects. You can find more on my <a className='text-blue-700 hover:text-blue-900' href='' target='_blank'>GitHub</a>.
             </p>
@@ -146,7 +146,7 @@ export default function Home() {
           </div>
 
           <section className="mt-20">
-            <h2 className="text-2xl font-semibold mb-4 text-right CourierPrime">Contact__</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-right CourierPrime">🌐 Contact__</h2>
             <p className="text-lg prose prose-neutral dark:prose-invert text-right CourierPrime">
               I am open to new opportunities, collaborations, and projects. Feel free to reach out to me via email or social media.
             </p>
@@ -156,18 +156,18 @@ export default function Home() {
           </section>
 
           <section className="mt-20 mb-20">
-            <h2 className="text-2xl font-semibold mb-4 CourierPrime">Q&A__</h2>
+            <h2 className="text-2xl font-semibold mb-4 CourierPrime">❓ Q&A__</h2>
             <div className="prose prose-neutral dark:prose-invert">
               <h3 className="text-lg font-semibold CourierPrime">Q: Kenapa pilih fisika?</h3>
               <p className="text-lg CourierPrime">A: Gapapa suka aja😭.</p>
             </div>
           </section>
 
-          <div className="mt-20 mb-20">
-            <p className="text-xl prose prose-neutral dark:prose-invert text-center CourierPrime">
-              “The only way to do great work is to love what you do.” - Steve Jobs
-            </p>
-          </div>
+            <div className="mt-20 mb-20">
+              <p className="text-xl prose prose-neutral dark:prose-invert text-center CourierPrime">
+                <strong><em>“The only way to do great work is to love what you do.” - Steve Jobs</em></strong>
+              </p>
+            </div>
 
           <div className="mt-10 mb-5">
             <p className="prose prose-neutral dark:prose-invert text-center CourierPrime">
