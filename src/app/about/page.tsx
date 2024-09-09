@@ -55,7 +55,7 @@ export default function Dashboard() {
 
 
         <div className="social-media-links grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
-          <img src="/pp.jpg" alt="Profile Picture" className="border-8 border-gray-100 w-70 h-70 mt-5" />
+          <img src="/pp.jpg" alt="Profile Picture" className="border-8 border-gray-100 w-70 h-70 mt-5 shadow-lg" />
           <p className="mt-5 text-lg">
             Hello everyone, my name is Muhammad Akhyar Fahrurrozi. Usually called Fahrur. I am a student at the University of Indonesia majoring in Physics. With my diverse experience, I am eager to contribute to projects that integrate my passions for technology and science. I am dedicated to continuous learning and growth in this field.
           </p>
