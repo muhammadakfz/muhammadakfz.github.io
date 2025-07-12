@@ -1,7 +1,6 @@
 'use client'
 
 import React, { use, useEffect, useRef } from 'react'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./styles/globals.css"
 import "./styles/font.css"
@@ -9,51 +8,186 @@ import { GeistSans } from 'geist/font/sans';
 
 const SocialMediaButton = ({ url, icon, altText, className }: { url: string, icon: string, altText: string, className: string }) => {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className="social-media-button">
-      <img src={icon} alt={altText} className={`icon ${className}`} />
+    <a href={url} target="_blank" rel="noopener noreferrer" className="bg-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-gray-400 hover:bg-gray-700">
+      <img src={icon} alt={altText} className={`${className}`} />
     </a>
   );
 };
 
-// Example usage of SocialMediaButton
 const SocialMediaLinks = () => {
   return (
-    <div className="social-media-links mt-10 flex flex-grid">
+    <div className="flex justify-center space-x-4">
       <SocialMediaButton
         url="https://www.instagram.com/muhammadakfz"
         icon="/instagram.png"
         altText="Instagram"
-        className={"w-8 h-8 mr-5"}
+        className={"w-10 h-10 hover:scale-110 transition-transform"}
       />
       <SocialMediaButton
-        url="https://x.com/mxddoofzx"
+        url="https://x.com/muhammadakfz"
         icon="/x.png"
         altText="X"
-        className={"w-7 h-7 mr-5"}
+        className={"w-10 h-10 hover:scale-110 transition-transform"}
       />
       <SocialMediaButton
         url="https://github.com/muhammadakfz"
         icon="/github.png"
         altText="Github"
-        className={"w-8 h-8"}
+        className={"w-10 h-10 hover:scale-110 transition-transform"}
       />
       <SocialMediaButton
         url='https://www.linkedin.com/in/muhammadakfz/'
         icon='/linkedin.png'
         altText='LinkedIn'
-        className='w-8 h-8 ml-5'
+        className='w-10 h-10 hover:scale-110 transition-transform'
       />
     </div>
   );
 };
 
+const ProfileSection = () => {
+  return (
+    <div className="flex flex-col items-center mb-6 px-4">
+      <div className="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
+        <img
+          src="/pp.jpeg"
+          alt="Profile Picture"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h1 className={`text-3xl font-bold text-white mb-2 text-center ${GeistSans.className}`}>Muhammad Akhyar Fahrurrozi</h1>
+      <p className={`text-gray-300 text-center max-w-sm mb-2 leading-relaxed ${GeistSans.className}`}>
+        Software Developer & Tech Enthusiast
+      </p>
+      <p className={`text-sm text-gray-400 text-center max-w-md leading-relaxed ${GeistSans.className}`}>
+        Welcome to my digital space! Connect with me through the links below.
+      </p>
+    </div>
+  );
+};
+
+const LinkButton = ({ url, title, description, icon }: {
+  url: string,
+  title: string,
+  description?: string,
+  icon?: string
+}) => {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full max-w-md bg-white/10 backdrop-blur-md text-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-3 mb-3 border border-white/20 hover:border-white/30 group hover:bg-white/20 flex flex-col items-start"
+    >
+      <div className="flex items-center justify-between w-full">
+        {icon && (
+          <div className="rounded-lg p-3 transition-transform transform group-hover:scale-105">
+            <img src={icon} alt={title} className="w-8 h-8" />
+          </div>
+        )}
+        <div className="flex-1">
+          <h3 className={`font-semibold text-white group-hover:text-gray-200 transition-colors ${GeistSans.className}`}>
+            {title}
+          </h3>
+          {description && (
+            <p className={`text-sm text-gray-300 group-hover:text-gray-100 transition-colors ${GeistSans.className}`}>
+              {description}
+            </p>
+          )}
+        </div>
+
+        <div className="flex items-center justify-center w-6">
+          <svg
+            className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+const LinksSection = () => {
+  return (
+    <div className="w-full max-w-md mx-auto">
+      <LinkButton
+        url="https://github.com/muhammadakfz"
+        title="GitHub"
+        description="Check out my projects and contributions"
+        icon="/github.png"
+      />
+      <LinkButton
+        url="https://www.linkedin.com/in/muhammadakfz/"
+        title="LinkedIn"
+        description="Connect with me professionally"
+        icon="/linkedin.png"
+      />
+      <LinkButton
+        url="https://www.instagram.com/muhammadakfz"
+        title="Instagram"
+        description="Follow my daily updates"
+        icon="/instagram.png"
+      />
+      <LinkButton
+        url="https://x.com/mxddoofzx"
+        title="X (Twitter)"
+        description="Follow me for tech updates"
+        icon="/x.png"
+      />
+      <LinkButton
+        url="mailto:your.email@example.com"
+        title="Email Me"
+        description="Get in touch via email"
+        icon="/email.png"
+      />
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="w-full text-center mt-8 py-6 rounded-xl shadow-inner">
+      <div className="flex flex-col items-center space-y-1">
+        <p className={`text-sm text-gray-300 ${GeistSans.className}`}>
+          © {new Date().getFullYear()} muhammadakfz. All rights reserved.
+        </p>
+        <p className={`text-xs text-gray-400 flex items-center gap-1 ${GeistSans.className}`}>
+          Built with
+          <span className="animate-pulse text-red-400">❤️</span>
+          and lots of ☕
+        </p>
+      </div>
+    </footer>
+  );
+};
 
 export default function Home() {
   return (
     <>
       <title>Home | muhammadakfz✌️</title>
-      <body className={`max-w-2xl mb-40 md:flex-row mx-4 mt-8 lg:mx-auto `}>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQC40TBS0H"></script>
+      <body className={`min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-900 bg-[length:400%_400%] animate-gradient ${GeistSans.className}`}>
+        <style jsx>{`
+          @keyframes gradient {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+          .animate-gradient {
+            animation: gradient 15s ease infinite;
+          }
+        `}
+        </style>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQC40TBS0H"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -62,121 +196,14 @@ export default function Home() {
             gtag('config', 'G-TQC40TBS0H');
           `,
         }} />
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 ">
-          <h1 className={`text-2xl mb-10 antialiased font-medium tracking-tight CourierPrime font-semibold`}>Hi! l am Fahrur <span className="wave">👋</span></h1>
-          <p className={`text-lg mt-4 prose prose-neutral dark:prose-invert CourierPrime `}>
-            I'm a frontend developer and programmer, currently an undergraduate Physics student at the <a className='text-blue-700 hover:text-blue-900' href='https://www.ui.ac.id/'>University of Indonesia</a>. With my diverse experience, I am eager to contribute to projects that integrate my passions for technology and science. I am dedicated to continuous learning and growth in this field.
-          </p>
-          {/* <div className="mt-5">
-            <a href="/muhammadakfz_CV.pdf" download className="bg-blue-700 text-white text-small font-semibold px-4 py-2 rounded-md">Download CV</a>
-          </div> */}
-
-          {/* <SocialMediaLinks /> */}
-
-          <div className="mt-10">
-            <a href="/about" className="bg-black text-white text-small font-semibold px-4 py-3 CourierPrime rounded-md btn">learn more</a>
+        <main className="min-h-screen max-w-lg mx-auto px-4 py-20">
+          <div className="flex flex-col items-center space-y-6 py-100">
+            <ProfileSection />
+            <LinksSection />
+            <Footer />
           </div>
-
-          <div className="mt-10">
-          </div>
-
-          <section className="mt-20">
-            <h2 className="text-2xl font-semibold mb-4 text-right CourierPrime">🧠 My Skills__</h2>
-            <p className="text-lg prose prose-neutral dark:prose-invert text-right CourierPrime">
-              I have experience with a variety of technologies, including React, Next.js, TypeScript, and Tailwind CSS. I am also familiar with Python, Java, and C++.
-            </p>
-
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h4 className="mt-10 text-lg font-semibold mt-4 CourierPrime">Software / Tools</h4>
-                <ul className="mt-5 prose prose-neutral dark:prose-invert list-disc ml-5 CourierPrime">
-                  <li>Figma</li>
-                  <li>Unity</li>
-                  <li>VS Code</li>
-                  <li>Google Colab</li>
-                  <li>Git</li>
-                  <li>Android Studio</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="mt-10 text-lg font-semibold mt-4 CourierPrime">Languages</h4>
-                <ul className="mt-5 prose prose-neutral dark:prose-invert list-disc ml-5 CourierPrime">
-                  <li>JavaScript</li>
-                  <li>TypeScript</li>
-                  <li>Python</li>
-                  <li>Java</li>
-                  <li>C++</li>
-                  <li>C#</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <div className="mt-10">
-          </div>
-
-          <section className="mt-20">
-            <h2 className="text-2xl font-semibold mb-4 CourierPrime">🎯 Projects__</h2>
-            <p className="text-lg prose prose-neutral dark:prose-invert CourierPrime">
-              Here are some of my recent projects. You can find more on my <a className='text-blue-700 hover:text-blue-900' href='' target='_blank'>GitHub</a>.
-            </p>
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h4 className="mt-10 text-lg font-semibold mt-4 CourierPrime"> <a className='text-blue-700 hover:text-blue-900' href='https://github.com/muhammadakfz/Algorithm-Adventures'>Algorithm-Adventures</a></h4>
-                <p className="mt-5 prose prose-neutral dark:prose-invert CourierPrime">
-                  My collection of solutions for various problem sets that I have worked on, such as Codeforces, AtCoder, Kattis, TLX, and many more.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="mt-10 text-lg font-semibold mt-4 CourierPrime"> <a className='text-blue-700 hover:text-blue-900' href='https://github.com/muhammadakfz/Al-Qalam-100'>Al Qalam 100</a></h4>
-                <p className="mt-5 prose prose-neutral dark:prose-invert CourierPrime">
-                  One of Tremicle's game shows inspired by Family 100. If you are interested in making a game like Family 100, you can use this repository as a reference or contact me if you want the complete source code.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <a href="https://github.com/muhammadakfz" className="bg-black text-white text-small font-semibold px-4 py-3 CourierPrime rounded-md btn">view all projects</a>
-            </div>
-          </section>
-
-          <div className="mt-10">
-          </div>
-
-          <section className="mt-20">
-            <h2 className="text-2xl font-semibold mb-4 text-right CourierPrime">🌐 Contact__</h2>
-            <p className="text-lg prose prose-neutral dark:prose-invert text-right CourierPrime">
-              I am open to new opportunities, collaborations, and projects. Feel free to reach out to me via email or social media.
-            </p>
-            <div className="mt-10 text-right">
-              <a href="/contact" className="bg-black text-white text-small font-semibold px-4 py-3 CourierPrime rounded-md btn">contact me</a>
-            </div>
-          </section>
-
-          <section className="mt-20 mb-20">
-            <h2 className="text-2xl font-semibold mb-4 CourierPrime">❓ Q&A__</h2>
-            <div className="prose prose-neutral dark:prose-invert">
-              <h3 className="text-lg font-semibold CourierPrime">Q: Kenapa pilih fisika?</h3>
-              <p className="text-lg CourierPrime">A: Gapapa suka aja😭.</p>
-            </div>
-          </section>
-
-            <div className="mt-20 mb-20">
-              <p className="text-xl prose prose-neutral dark:prose-invert text-center CourierPrime">
-                <strong><em>“The only way to do great work is to love what you do.” - Steve Jobs</em></strong>
-              </p>
-            </div>
-
-          <div className="mt-10 mb-5">
-            <p className="prose prose-neutral dark:prose-invert text-center CourierPrime">
-              ©2024  <a className='text-blue-700 hover:text-blue-900' href='https://www.instagram.com/muhammadakfz/?hl=id'>muhammadakfz</a>. All rights reserved.
-            </p>
-          </div>
-
         </main>
       </body>
     </>
-  )
+  );
 }

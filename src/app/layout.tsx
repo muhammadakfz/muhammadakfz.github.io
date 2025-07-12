@@ -26,20 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="SourceSerif">
       <body>
-        <aside className="-ml-[8px] mt-10 mb-16 tracking-tight">
-          <div className="lg:sticky lg:top-20">
-            <nav className={`flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative CourierPrime`} id="nav">
-              <div className="flex flex-row space-x-0 pr-10">
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 " href="/">home</a>
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="/about">about</a>
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="https://github.com/muhammadakfz">github</a>
-                <a className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2" href="/contact">contact me</a>
-              </div>
-            </nav>
-            <Analytics/>
-          </div>
-        </aside>
         {children}
+        <Analytics/>
       </body>
     </html>
   );

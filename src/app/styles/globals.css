@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   width: 100%;
-  height: 100px;
   min-width: 360px;
   scroll-behavior: smooth;
 }
