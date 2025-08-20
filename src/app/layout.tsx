@@ -13,12 +13,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Toukoum Portfolio",
+  title: "Osanai Yuki",
   description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
   keywords: [
-    "Toukoum", 
-    "Portfolio", 
-    "Developer", 
+    "Osanai Yuki",
+    "Portfolio",
+    "Developer",
     "AI", 
     "Interactive", 
     "Memoji", 
@@ -29,24 +29,24 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Toukoum",
-      url: "https://toukoum.fr",
+      name: "muhammadakfz",
+      url: "https://muhammadakfz.com",
     },
   ],
   creator: "Toukoum",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toukoum.fr",
-    title: "Toukoum Portfolio",
+    url: "https://muhammadakfz.com",
+    title: "Osanai Yuki",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    siteName: "Toukoum Portfolio",
+    siteName: "Osanai Yuki Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toukoum Portfolio",
+    title: "Osanai Yuki",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    creator: "@toukoum",
+    creator: "@muhammadakfz",
   },
   icons: {
     icon: [
@@ -79,7 +79,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
         >
           <main className="flex min-h-screen flex-col">

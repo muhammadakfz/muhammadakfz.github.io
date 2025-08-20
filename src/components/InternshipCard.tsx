@@ -23,14 +23,14 @@ const InternshipCard = () => {
           {/* Avatar placeholder */}
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
-              src="/avatar-raphael.jpg"
-              alt="Raphael's avatar"
+              src="/pp.jpeg"
+              alt="muhammadakfz's avatar"
               className="h-full w-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-foreground text-2xl font-semibold">
-              Raphael Giraud
+              Muhammad Akhyar Fahrurrozi
             </h2>
             <p className="text-muted-foreground text-sm">
               Intership Application
@@ -57,7 +57,7 @@ const InternshipCard = () => {
           <div>
             <p className="text-foreground text-sm font-medium">Duration</p>
             <p className="text-muted-foreground text-sm">
-              6 months – starting September 2025 (fall 2025)
+              6 months – starting October 2025 (fall 2025)
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ const InternshipCard = () => {
           <div>
             <p className="text-foreground text-sm font-medium">Location</p>
             <p className="text-muted-foreground text-sm">
-              Preferably San Francisco 🇺🇸
+              Preferably Indonesia, Depok 🇮🇩
             </p>
           </div>
         </div>
@@ -108,10 +108,7 @@ const InternshipCard = () => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          Real-world AI dev experience from Lighton (MCP, secure GPTs, RAG
-          pipelines). <br /> 3x hackathon wins (ETH Oxford, Paris Blockchain
-          Week, Colosseum Breakout on Solana). <br /> I ship fast, and love
-          building useful things that actually work.
+          Real-world AI & systems dev experience (LLVM, compilers, machine learning, cybersecurity). 3x competition highlights (competitive programming, physics olympiads, hackathons). I ship fast, solve hard problems, and love building things that scale
         </p>
       </div>
 
@@ -119,9 +116,7 @@ const InternshipCard = () => {
       <div className="mt-8">
         <p className="text-foreground mb-2 text-lg font-semibold">Goal</p>
         <p className="text-foreground text-sm">
-          Join a bold, innovative team building AI-powered tools that matter. I
-          want to improve fast, contribute hard, and leave a mark. I’m fast,
-          flexible, and HUNGRYYYYY 🔥
+          Join a daring team pushing the edge of science and tech. I’m Fahrur, a Physics student at Universitas Indonesia with a love for AI, coding, and problem-solving. I learn fast, adapt quickly, and thrive on turning ideas into real impact. Hungry to grow, build, and contribute where it matters most.
         </p>
       </div>
 
@@ -129,7 +124,7 @@ const InternshipCard = () => {
       <div className="mt-10 flex justify-center">
         <button
           onClick={openMail}
-          className="cursor-pointer rounded-full bg-black px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-zinc-800"
+          className="cursor-pointer rounded-full bg-[color:var(--foreground)] px-6 py-3 font-semibold text-[color:var(--primary-foreground)] transition-colors duration-300 hover:bg-[color:var(--foreground)/0.85]"
         >
           Contact me
         </button>

@@ -70,7 +70,7 @@ export default function ChatBottombar({
           <button
             type="submit"
             disabled={isLoading || !input.trim() || isToolInProgress}
-            className="flex items-center justify-center rounded-full bg-[#0171E3] p-2 text-white disabled:opacity-50"
+            className="flex items-center justify-center rounded-full bg-[#0171E3] p-2 text-[color:var(--primary-foreground)] disabled:opacity-50"
             onClick={(e) => {
               if (isLoading) {
                 e.preventDefault();

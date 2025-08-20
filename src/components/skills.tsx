@@ -8,20 +8,18 @@ import { Code, Cpu, PenTool, Users } from 'lucide-react';
 const Skills = () => {
   const skillsData = [
     {
-      category: 'Frontend Development',
+      category: 'Programming Languages',
       icon: <Code className="h-5 w-5" />,
       skills: [
-        'HTML',
-        'CSS',
-        'JavaScript/TypeScript',
-        'Tailwind CSS',
-        'Bootstrap',
-        'Next.js',
-        'React',
-        'Vercel AI SDK',
-        'Gsap',
+        'Python',
+        'C++',
+        'C#',
+        'C',
+        'JavaScript',
+        'Compettitve'
       ],
-      color: 'bg-blue-50 text-blue-600 border border-blue-200',
+
+      color: 'bg-red-50 text-red-600 border border-red-200',
     },
     {
       category: 'Backend & Systems',
@@ -41,9 +39,25 @@ const Skills = () => {
       color: 'bg-emerald-50 text-emerald-600 border border-emerald-200',
     },
     {
+      category: 'Web Development',
+      icon: <Code className="h-5 w-5" />,
+      skills: [
+        'HTML',
+        'CSS',
+        'TypeScript',
+        'React',
+        'Next.js',
+        'Vercel AI SDK',
+        'Tailwind CSS',
+        'Node.js',
+        'Bootstrap',
+      ],
+      color: 'bg-blue-50 text-blue-600 border border-blue-200',
+    },
+    {
       category: 'Design & Creative Tools',
       icon: <PenTool className="h-5 w-5" />,
-      skills: ['Figma', 'Davinci Code', 'Illustrator', 'Canva', 'Keynote'],
+      skills: ['Figma', 'Illustrator', 'Canva', 'Notion', 'Obsidia'],
       color: 'bg-indigo-50 text-indigo-600 border border-indigo-200',
     },
     {
@@ -61,16 +75,35 @@ const Skills = () => {
       color: 'bg-amber-50 text-amber-600 border border-amber-200',
     },
     {
+      category: 'Developer Tools',
+      icon: <Code className="h-5 w-5" />,
+      skills: [
+        'VS Code',
+        'Git',
+        'GitHub CLI',
+        'Docker',
+        'Make',
+        'tmux',
+        'ripgrep',
+        'fzf',
+        'bash',
+        'pnpm',
+        'ROS',
+        'ROS2',
+      ],
+      color: 'bg-slate-50 text-slate-700 border border-slate-200',
+    },
+    {
       category: 'AI & Fullstack Engineering',
       icon: <Cpu className="h-5 w-5" />,
       skills: [
-        'LLM Providers (ChatGPT, Whisper, Groq, Mistral & Claude)',
+        'Computer Vision',
+        'YOLO8',
+        'YOLO11',
+        'LLM Providers (ChatGPT, Gemini, Claude)',
         'AI Agents',
         'Prompt engineering',
-        'Vector databases (Weaviate, Pinecone)',
-        'RAG (Retrieval-Augmented Generation)',
         'Tool routing & calling',
-        'Hugging Face Transformers',
         'Vercel AI SDK',
         'Supabase',
         'Prisma',
@@ -114,16 +147,17 @@ const Skills = () => {
       initial={{ scale: 0.98, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-      className="mx-auto w-full max-w-5xl rounded-4xl"
+      className="mx-auto w-full max-w-5xl rounded-none overflow-hidden"
     >
-      <Card className="w-full border-none px-0 pb-12 shadow-none">
-        <CardHeader className="px-0 pb-1">
+      {/* Use transparent Card variants so the section blends with surrounding background */}
+      <Card className="w-full border-none px-0 pb-12 shadow-none bg-transparent">
+        <CardHeader className="px-0 pb-1 bg-transparent">
           <CardTitle className="text-primary px-0 text-4xl font-bold">
             Skills & Expertise
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="px-0">
+        <CardContent className="px-0 bg-transparent overflow-hidden">
           <motion.div
             className="space-y-8 px-0"
             variants={containerVariants}
@@ -158,7 +192,7 @@ const Skills = () => {
                         transition: { duration: 0.2 },
                       }}
                     >
-                      <Badge className={`border px-3 py-1.5 font-normal`}>
+                      <Badge className={`${section.color} px-3 py-1.5 font-normal`}>
                         {skill}
                       </Badge>
                     </motion.div>

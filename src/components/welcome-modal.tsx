@@ -27,17 +27,17 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
   const defaultTrigger = (
     <Button
       variant="ghost"
-      className="h-auto w-auto cursor-pointer rounded-2xl bg-white/30 p-3 shadow-lg backdrop-blur-lg hover:bg-white/60 focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
+  className="h-auto w-auto cursor-pointer rounded-2xl bg-[color:var(--card)/0.3] p-3 shadow-lg backdrop-blur-lg hover:bg-[color:var(--card)/0.6] focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
       onClick={() => setIsOpen(true)}
     >
       <Image
-        src="/logo-toukoum.svg"
+        src="/osanai.gif"
         width={100}
         height={100}
-        alt="Logo"
-        className="w-6 md:w-8"
+        alt="Osanai gif"
+        className="w-6 md:w-8 rounded-full"
       />
-      <span className="sr-only">About Toukoum</span>
+      <span className="sr-only">About Osanai Yuki</span>
     </Button>
   );
 
@@ -69,16 +69,18 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
             <DialogHeader className="relative flex flex-row items-start justify-between px-8 pt-8 pb-6">
               <div>
                 <DialogTitle className="flex items-center gap-2 text-4xl font-bold tracking-tight">
-                  Welcome to AI Portfolio
+                  Hello — I'm Osanai Yuki
                 </DialogTitle>
                 <DialogDescription className="mt-2 text-base">
-                  {/*My interactive AI portfolio experience*/}
+                  I'm an AI assistant built to help visitors explore projects,
+                  skills and contact info for muhammadakfz. Ask me anything —
+                  I'll adapt my answers to what you want to know.
                 </DialogDescription>
               </div>
               <Button
                 variant="ghost"
                 size="icon"
-                className="sticky top-0 right-0 cursor-pointer rounded-full bg-black p-2 text-white hover:bg-black/90 hover:text-white"
+                className="sticky top-0 right-0 cursor-pointer rounded-full bg-pink-500 p-2 text-white hover:bg-pink-600"
                 onClick={() => setIsOpen(false)}
               >
                 <X className="h-6 w-6" />
@@ -91,30 +93,26 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
               <section className="bg-accent w-full space-y-8 rounded-2xl p-8">
                 {/* What section */}
                 <div className="space-y-3">
-                  <h3 className="text-primary flex items-center gap-2 text-xl font-semibold">
-                    What's ????
+                  <h3 className="text-pink-500 flex items-center gap-2 text-xl font-semibold ">
+                    What is this?
                   </h3>
                   <p className="text-accent-foreground text-base leading-relaxed">
-                    I'm so excited to present my{' '}
-                    <strong>brand new AI Portfolio.</strong>
-                    <br /> Whether you're a recruiter, a friend, family member,
-                    or just curious, feel free to ask anything you want!
+                    This is an interactive portfolio powered by an AI assistant
+                    (me — Osanai Yuki). I can explain projects, show my stack,
+                    or walk you through demos. Ask any question and I'll
+                    tailor the response to your needs.
                   </p>
                 </div>
 
                 {/* Why section */}
                 <div className="space-y-3">
-                  <h3 className="text-primary flex items-center gap-2 text-xl font-semibold">
-                    Why ???
+                  <h3 className="text-pink-500 flex items-center gap-2 text-xl font-semibold">
+                    Why use it?
                   </h3>
                   <p className="text-accent-foreground text-base leading-relaxed">
-                    Traditional portfolios can be limiting. <br /> They can't
-                    adapt to every visitor's specific needs. <br /> My portfolio
-                    becomes{' '}
-                    <strong>
-                      exactly what you're interested in knowing about me and my
-                      work.
-                    </strong>
+                    Static portfolios are one-size-fits-all. With Osanai I can
+                    adapt answers to recruiters, teammates or curious visitors
+                    and surface only what's relevant.
                   </p>
                 </div>
               </section>
@@ -124,20 +122,21 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
             <div className="flex flex-col items-center px-8 pt-4 pb-0 md:pb-8">
               <Button
                 onClick={() => setIsOpen(false)}
-                className="h-auto rounded-full px-4 py-3"
+                className="h-auto rounded-full px-4 py-3 bg-pink-500 text-white hover:bg-pink-600"
                 size="sm"
               >
-                Start Chatting
+                Talk to Osanai
               </Button>
               <div
                 className="mt-6 flex cursor-pointer flex-wrap gap-1 text-center text-sm"
                 onClick={handleContactMe}
               >
                 <p className="text-muted-foreground">
-                  If you love it, please share it! Feedback is always welcome.
+                  If you like this, please share it — feedback helps improve
+                  the experience.
                 </p>
-                <div className="flex cursor-pointer items-center text-blue-500 hover:underline">
-                  Contact me.
+                <div className="flex cursor-pointer items-center text-pink-500 hover:underline">
+                  Contact muhammadakfz
                 </div>
               </div>
             </div>

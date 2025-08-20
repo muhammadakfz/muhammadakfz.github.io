@@ -21,6 +21,7 @@ import {
   Layers,
   MailIcon,
   PartyPopper,
+  Smile,
   Sparkles,
   UserRoundSearch,
   UserSearch,
@@ -34,31 +35,26 @@ interface HelperBoostProps {
 }
 
 const questions = {
-  Me: 'Who are you? I want to know more about you.',
-  Projects: 'What are your projects? What are you working on right now?',
-  Skills: 'What are your skills? Give me a list of your soft and hard skills.',
-  Fun: "What the craziest thing you've ever done? (mb?) What are your hobbies? ",
+  Osanai: 'Who are you? I want to know more about you.',
+  Skills: 'What are Fahrur skills? Give me a list of soft and hard skills.',
+  Projects: 'What are Fahrur projects? What are you working on right now?',
   Contact:
     'How can I reach you? What kind of project would make you say "yes" immediately?',
 };
 
 const questionConfig = [
-  { key: 'Me', color: '#329696', icon: Laugh },
-  { key: 'Projects', color: '#3E9858', icon: BriefcaseBusiness },
+  { key: 'Osanai', color: '#329696', icon: Laugh },
   { key: 'Skills', color: '#856ED9', icon: Layers },
-  { key: 'Fun', color: '#B95F9D', icon: PartyPopper },
+  { key: 'Projects', color: '#B95F9D', icon: BriefcaseBusiness },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
 ];
 
 // Helper drawer data
 const specialQuestions = [
-  'Mountain Bike you said?? Show me!',
-  'Who are you?',
-  'Can I see your resume?',
-  'What projects are you most proud of?',
-  'What are your skills?',
+  'Does Fahrur have a girlfriend?',
+  'Who is Fahrur?',
+  'What are Fahrur skills?',
   'How can I reach you?',
-  "What's the craziest thing you've ever done?",
 ];
 
 const questionsByCategory = [
@@ -68,9 +64,7 @@ const questionsByCategory = [
     icon: UserSearch,
     questions: [
       'Who are you?',
-      'What are your passions?',
-      'How did you get started in tech?',
-      'Where do you see yourself in 5 years?',
+      'Who is Fahrur?',
     ],
   },
   {
@@ -78,11 +72,11 @@ const questionsByCategory = [
     name: 'Professional',
     icon: BriefcaseIcon,
     questions: [
-      'Can I see your resume?',
-      'What makes you a valuable team member?',
-      'Where are you working now?',
-      'Why should I hire you?',
-      "What's your educational background?",
+      'Can I see Fahrur resume?',
+      'What makes Fahrur a valuable team member?',
+      'Where is Fahrur working now?',
+      'Why should I hire Fahrur?',
+      "What's Fahrur educational background?",
     ],
   },
   {
@@ -96,8 +90,7 @@ const questionsByCategory = [
     name: 'Skills',
     icon: GraduationCapIcon,
     questions: [
-      'What are your skills?',
-      'How was your experience at École 42?',
+      'What are Fahrur skills?',
     ],
   },
   {
@@ -105,10 +98,9 @@ const questionsByCategory = [
     name: 'Fun',
     icon: PartyPopper,
     questions: [
-      'Mountain Bike you said?? Show me!',
-      "What's the craziest thing you've ever done?",
+      "Does Fahrur have a girlfriend?",
+      'Does Fahrur have an idol?',
       'Mac or PC?',
-      'What are you certain about that 90% get wrong?',
     ],
   },
   {
@@ -117,7 +109,6 @@ const questionsByCategory = [
     icon: MailIcon,
     questions: [
       'How can I reach you?',
-      "What kind of project would make you say 'yes' immediately?",
       'Where are you located?',
     ],
   },
@@ -209,7 +200,7 @@ export default function HelperBoost({
                     key={key}
                     onClick={() => handleQuestionClick(key)}
                     variant="outline"
-                    className="border-border hover:bg-border/30 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl border bg-white/80 px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
+                    className="border-border hover:bg-border/30 h-auto min-w-[100px] flex-shrink-0 cursor-pointer rounded-xl border bg-[color:var(--card)/0.8] px-4 py-3 shadow-none backdrop-blur-sm transition-none active:scale-95"
                   >
                     <div className="flex items-center gap-3 text-gray-700">
                       <Icon size={18} strokeWidth={2} color={color} />
@@ -224,7 +215,7 @@ export default function HelperBoost({
                     <TooltipTrigger asChild>
                       <Drawer.Trigger className="group relative flex flex-shrink-0 items-center justify-center">
                         <motion.div
-                          className="hover:bg-border/30 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-neutral-200 bg-white/80 px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200 dark:border-neutral-800 dark:bg-neutral-900"
+                          className="hover:bg-border/30 flex h-auto cursor-pointer items-center space-x-1 rounded-xl border border-border bg-[color:var(--card)/0.8] px-4 py-3 text-sm backdrop-blur-sm transition-all duration-200"
                           whileHover={{ scale: 1 }}
                           whileTap={{ scale: 0.98 }}
                         >
@@ -251,9 +242,9 @@ export default function HelperBoost({
 
         {/* Drawer Content */}
         <Drawer.Portal>
-          <Drawer.Overlay className="fixed inset-0 z-100 bg-black/60 backdrop-blur-xs" />
+          <Drawer.Overlay className="fixed inset-0 z-100 bg-[color:var(--background)/0.6] backdrop-blur-xs" />
           <Drawer.Content className="fixed right-0 bottom-0 left-0 z-100 mt-24 flex h-[80%] flex-col rounded-t-[10px] bg-gray-100 outline-none lg:h-[60%]">
-            <div className="flex-1 overflow-y-auto rounded-t-[10px] bg-white p-4">
+            <div className="flex-1 overflow-y-auto rounded-t-[10px] bg-[color:var(--card)] p-4">
               <div className="mx-auto max-w-md space-y-4">
                 <div
                   aria-hidden
@@ -337,7 +328,7 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
         'text-md px-6 py-4 text-left font-normal',
         'transition-all',
         'focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
-        isSpecial ? 'bg-black' : 'bg-[#F7F8F9]'
+  isSpecial ? 'bg-[color:var(--foreground)]' : 'bg-[color:var(--card)]'
       )}
       onClick={onClick}
       onHoverStart={() => setIsHovered(true)}
@@ -351,8 +342,8 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
       }}
     >
       <div className="flex items-center">
-        {isSpecial && <Sparkles className="mr-2 h-4 w-4 text-white" />}
-        <span className={isSpecial ? 'font-medium text-white' : ''}>
+  {isSpecial && <Sparkles className="mr-2 h-4 w-4 text-[color:var(--primary-foreground)]" />}
+  <span className={isSpecial ? 'font-medium text-[color:var(--primary-foreground)]' : ''}>
           {question}
         </span>
       </div>
@@ -367,7 +358,7 @@ function QuestionItem({ question, onClick, isSpecial }: QuestionItemProps) {
         <ChevronRight
           className={cn(
             'h-5 w-5 shrink-0',
-            isSpecial ? 'text-white' : 'text-primary'
+            isSpecial ? 'text-[color:var(--primary-foreground)]' : 'text-primary'
           )}
         />
       </motion.div>

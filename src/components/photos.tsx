@@ -80,9 +80,9 @@ export function Photos({ photos, className = '', title }: PhotosProps) {
                   <motion.div 
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
-                    className="absolute inset-0 bg-black/30 flex items-end p-4"
+                    className="absolute inset-0 bg-[color:var(--background)/0.3] flex items-end p-4"
                   >
-                    <p className="text-white text-sm sm:text-base font-medium">
+                    <p className="text-[color:var(--primary-foreground)] text-sm sm:text-base font-medium">
                       {photo.caption}
                     </p>
                   </motion.div>
@@ -100,7 +100,7 @@ export function Photos({ photos, className = '', title }: PhotosProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-[color:var(--background)/0.9] p-4"
             onClick={closePhoto}
           >
             <motion.div
@@ -112,7 +112,7 @@ export function Photos({ photos, className = '', title }: PhotosProps) {
             >
               {/* Close button */}
               <button
-                className="absolute top-4 right-4 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
+                className="absolute top-4 right-4 z-10 rounded-full bg-[color:var(--foreground)/0.5] p-2 text-[color:var(--primary-foreground)] hover:bg-[color:var(--foreground)/0.7]"
                 onClick={closePhoto}
               >
                 <X className="h-6 w-6" />
@@ -130,8 +130,8 @@ export function Photos({ photos, className = '', title }: PhotosProps) {
               
               {/* Caption */}
               {selectedPhoto.caption && (
-                <div className="bg-black/60 p-4">
-                  <p className="text-center text-white">{selectedPhoto.caption}</p>
+                <div className="bg-[color:var(--background)/0.6] p-4">
+                  <p className="text-center text-[color:var(--primary-foreground)]">{selectedPhoto.caption}</p>
                 </div>
               )}
             </motion.div>

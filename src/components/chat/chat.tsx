@@ -82,24 +82,11 @@ const Avatar = dynamic<AvatarProps>(
             className="relative cursor-pointer"
             onClick={() => (window.location.href = '/')}
           >
-            {isIOS() ? (
-              <img
-                src="/landing-memojis.png"
-                alt="iOS avatar"
-                className="h-full w-full scale-[1.8] object-contain"
-              />
-            ) : (
-              <video
-                ref={videoRef}
-                className="h-full w-full scale-[1.8] object-contain"
-                muted
-                playsInline
-                loop
-              >
-                <source src="/final_memojis.webm" type="video/webm" />
-                <source src="/final_memojis_ios.mp4" type="video/mp4" />
-              </video>
-            )}
+            <img
+              src="/osanai.gif"
+              alt="Avatar"
+              className="h-full w-full rounded-full object-cover"
+            />
           </div>
         </div>
       );
@@ -287,9 +274,10 @@ const Chat = () => {
         <div className="">
           <GithubButton
             animationDuration={1.5}
-            label="Star"
+            label="GitHub"
+            showLabel={false}
             size={'sm'}
-            repoUrl="https://github.com/toukoum/portfolio"
+            repoUrl="https://github.com/muhammadakfz"
           />
         </div>
       </div>
@@ -299,7 +287,7 @@ const Chat = () => {
         className="fixed top-0 right-0 left-0 z-50"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
+            'linear-gradient(to bottom, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.85) 30%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0) 100%)',
         }}
       >
         <div
@@ -379,7 +367,7 @@ const Chat = () => {
         </div>
 
         {/* Fixed Bottom Bar */}
-        <div className="sticky bottom-0 bg-white px-2 pt-3 md:px-0 md:pb-4">
+        <div className="sticky bottom-0 px-2 pt-3 md:px-0 md:pb-4">
           <div className="relative flex flex-col items-center gap-3">
             <HelperBoost submitQuery={submitQuery} setInput={setInput} />
             <ChatBottombar
@@ -392,14 +380,6 @@ const Chat = () => {
             />
           </div>
         </div>
-        <a
-          href="https://x.com/toukoumcode"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed right-3 bottom-0 z-10 mb-4 hidden cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-sm hover:underline md:block"
-        >
-          @toukoum
-        </a>
       </div>
     </div>
   );

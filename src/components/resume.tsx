@@ -8,13 +8,13 @@ import Image from 'next/image';
 export function Resume() {
   // Resume details
   const resumeDetails = {
-    title: "Raphael's Resume",
-    description: 'Full Stack Developer • AI Specialist',
+    title: "muhammadakfz's Resume",
+    description: 'Front-End Developer • AI Specialist',
     fileType: 'PDF',
     lastUpdated: 'March 2025',
-    fileSize: '0.5 MB',
-    previewImageSrc: '/resume_giraud_preview.png',
-    downloadUrl: '/resume_giraud.pdf',
+    fileSize: '0.13 MB',
+    previewImageSrc: '/',
+    downloadUrl: '/resume_muhammadakfz.pdf',
   };
 
   const handleDownload = () => {
@@ -58,7 +58,7 @@ export function Resume() {
 
             {/* Download indicator */}
             <motion.div
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-primary-foreground group-hover:bg-black/80"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--foreground)] text-[color:var(--primary-foreground)] group-hover:bg-[color:var(--foreground)/0.85]"
               initial={{ scale: 1 }}
             >
               <Download className="h-5 w-5" />
