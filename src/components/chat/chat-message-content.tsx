@@ -9,7 +9,7 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export type ChatMessageContentProps = {
   message: Message;
@@ -71,10 +71,59 @@ const CodeBlock = ({ content }: { content: string }) => {
   );
 };
 
+// TypingMarkdown: gradually reveals text to simulate a typing effect.
+const TypingMarkdown = ({
+  text,
+  isTyping,
+}: {
+  text: string;
+  isTyping: boolean;
+}) => {
+  const [visible, setVisible] = useState(isTyping ? '' : text);
+
+  useEffect(() => {
+    let id: number | null = null;
+    if (!isTyping) {
+      setVisible(text);
+      return;
+    }
+
+    // start typing from empty
+    setVisible('');
+    let i = 0;
+    const speed = 18; // ms per char
+    id = window.setInterval(() => {
+      i += 1;
+      setVisible(text.slice(0, i));
+      if (i >= text.length && id) {
+        window.clearInterval(id);
+      }
+    }, speed);
+
+    return () => {
+      if (id) window.clearInterval(id);
+    };
+  }, [text, isTyping]);
+
+  return (
+    <div>
+      <Markdown remarkPlugins={[remarkGfm]}>{visible}</Markdown>
+      {/* caret */}
+      {isTyping && (
+        <span className="inline-block w-[2px] h-4 bg-current align-middle ml-1 animate-pulse" />
+      )}
+    </div>
+  );
+};
+
 export default function ChatMessageContent({
   message,
+  isLast,
+  isLoading,
 }: ChatMessageContentProps) {
   // Only handle text parts
+  const shouldType = !!(isLast && isLoading && message.role === 'assistant');
+
   const renderContent = () => {
     return message.parts?.map((part, partIndex) => {
       if (part.type !== 'text' || !part.text) return null;
@@ -88,35 +137,39 @@ export default function ChatMessageContent({
             i % 2 === 0 ? (
               // Regular text content
               <div key={`text-${i}`} className="prose dark:prose-invert w-full">
-                <Markdown
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    p: ({ children }) => (
-                      <p className="break-words whitespace-pre-wrap">
-                        {children}
-                      </p>
-                    ),
-                    ul: ({ children }) => (
-                      <ul className="my-4 list-disc pl-6">{children}</ul>
-                    ),
-                    ol: ({ children }) => (
-                      <ol className="my-4 list-decimal pl-6">{children}</ol>
-                    ),
-                    li: ({ children }) => <li className="my-1">{children}</li>,
-                    a: ({ href, children }) => (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
-                      >
-                        {children}
-                      </a>
-                    ),
-                  }}
-                >
-                  {content}
-                </Markdown>
+                {shouldType ? (
+                  <TypingMarkdown text={content} isTyping={true} />
+                ) : (
+                  <Markdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      p: ({ children }) => (
+                        <p className="break-words whitespace-pre-wrap">
+                          {children}
+                        </p>
+                      ),
+                      ul: ({ children }) => (
+                        <ul className="my-4 list-disc pl-6">{children}</ul>
+                      ),
+                      ol: ({ children }) => (
+                        <ol className="my-4 list-decimal pl-6">{children}</ol>
+                      ),
+                      li: ({ children }) => <li className="my-1">{children}</li>,
+                      a: ({ href, children }) => (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-500 hover:underline"
+                        >
+                          {children}
+                        </a>
+                      ),
+                    }}
+                  >
+                    {content}
+                  </Markdown>
+                )}
               </div>
             ) : (
               // Code block content
